@@ -107,18 +107,7 @@ qiime diversity alpha-group-significance \
   --m-metadata-file "GP_site_metadata_cleaned.txt" \
   --o-visualization "${results_folder}/s08_alpha_shannon_per_group.qzv"
 
-# Beta diversity PCoA plot
-# Uses the unweighted unifrac distances (custom-axes parameter can be used to specific any column from your metadata file)
-qiime emperor plot \
---i-pcoa "${diversity_metrics_folder}/unweighted_unifrac_pcoa_results.qza" \
---m-metadata-file "GP_site_metadata_cleaned.txt" \
---o-visualization "${results_folder}/s09_beta_unweighted_unifrac_emperor_pcoa.qzv"
 
-# Use the bray curtis distances (custom-axes parameter can be used to specific any column from your metadata file)
-qiime emperor plot \
---i-pcoa "${diversity_metrics_folder}/bray_curtis_pcoa_results.qza" \
---m-metadata-file "GP_site_metadata_cleaned.txt" \
---o-visualization "${results_folder}/s09_beta_bray_curtis_emperor_pcoa.qzv"
 
 # Completion message
 echo ""
