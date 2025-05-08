@@ -110,7 +110,7 @@ qiime diversity alpha-group-significance \
 # Beta diversity PCoA plot
 # Uses the weighted unifrac distances (custom-axes parameter can be used to specific any column from your metadata file)
 qiime emperor plot \
---i-pcoa "${diversity_metrics_folder}/weighted_unifrac_pcoa_results.qza" \
+--i-pcoa "${diversity_metrics_folder}/unweighted_unifrac_pcoa_results.qza" \
 --m-metadata-file "GP_site_metadata_cleaned.txt" \
 --o-visualization "${results_folder}/s09_beta_weighted_unifrac_emperor_pcoa.qzv"
 
